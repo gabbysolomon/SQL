@@ -1,0 +1,25 @@
+CREATE TABLE gym_clothing (id integer primary key, name TEXT, quantity integer, aisle integer, size integer, color integer);
+
+INSERT INTO gym_clothing VALUES (1,'sports_bra', 20, 2, 'small', 'black');
+INSERT INTO gym_clothing VALUES (2, 'sports_bra', 10, 2, 'medium', 'black');
+INSERT INTO gym_clothing VALUES (3, 'sports_bra', 17, 2, 'large', 'black');
+INSERT INTO gym_clothing VALUES (4, 'sweatpants', 12, 8, 'small', 'grey');
+INSERT INTO gym_clothing VALUES (5, 'sweatpants', 9, 8, 'medium', 'black');
+INSERT INTO gym_clothing VALUES (6, 'sweatpants', 2, 8, 'large', 'grey');
+INSERT INTO gym_clothing VALUES (7, 'tshirts', 35, 5, 'small', 'white');
+INSERT INTO gym_clothing VALUES (8, 'tshirts', 18, 5, 'medium', 'white');
+INSERT INTO gym_clothing VALUES (9, 'tshirts', 2, 5, 'large', 'white');
+INSERT INTO gym_clothing VALUES (10, 'jackets', 13, 7, 'small','red');
+INSERT INTO gym_clothing VALUES (11, 'jackets', 3, 7, 'medium', 'red');
+INSERT INTO gym_clothing VALUES (12, 'jackets', 6, 7, 'medium', 'red');
+INSERT INTO gym_clothing VALUES (13, 'jackets', 12, 7, 'large', 'red');
+INSERT INTO gym_clothing VALUES (14, 'tanktops', 3, 3, 'small', 'blue');
+INSERT INTO gym_clothing VALUES (15, 'tanktops', 6, 3, 'medium', 'blue');
+INSERT INTO gym_clothing VALUES (16, 'tanktops', 9, 3, 'large', 'blue');
+
+
+SELECT * FROM gym_clothing ORDER BY size desc;
+
+SELECT * FROM gym_clothing WHERE size ='medium' ORDER BY aisle;
+
+SELECT SUM(quantity) FROM gym_clothing WHERE size ='medium';
